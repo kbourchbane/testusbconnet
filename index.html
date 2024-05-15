@@ -22,7 +22,7 @@
 	}
 
 	function connectAndPrint() {
-		if (device == null) {
+		//if (device == null) {
 			navigator.usb.requestDevice({ filters: [] })
 			.then(selectedDevice => {
 				device = selectedDevice;
@@ -31,9 +31,9 @@
 			})
 			.then(() => print())
 			.catch(error => { console.log(error); })
-		}
-		else
-			print();
+		//}
+		//else
+			//print();
 	}
 
 	navigator.usb.getDevices()
